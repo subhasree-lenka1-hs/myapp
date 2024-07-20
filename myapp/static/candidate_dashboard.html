@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <strong>{{.Name}}</strong>!</p>
+
+    <div class="container">
+        <!-- <h1>Candidate Dashboard</h1> -->
+        <div class="content">
+            <p>Welcome, <strong>{{.Name}}</strong>!</p>
+            <p>Email: {{.Email}}</p>
+
+            
+            <h2>Candidate Details</h2>
+            <table>
+                <tr>
+                    <th>Date of Birth</th>
+                    <td>{{.Dob}}</td>
+                </tr>
+                <tr>
+                    <th>Qualification</th>
+                    <td>{{.Qualification}}</td>
+                </tr>
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="{{.GitHub}}" target="_blank">{{.GitHub}}</a></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td>{{.Mobile}}</td>
+                </tr>
+            </table>
+
+            
+            <h2>My Applications</h2>
+            <p>No applications to display.</p>
+
+            <p><a href="/" class="button">Logout</a></p>
+        </div>
+    </div>
+</body>
+</html>

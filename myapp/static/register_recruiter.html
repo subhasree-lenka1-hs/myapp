@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Registration</title>
+    <link rel="stylesheet" href="css/register_recruiter.css">
+</head>
+<body>
+    <form id="registrationForm" action="/submit_recruiter_registration" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <h3>Recruiter Registration</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password<br><br>
+
+        <label for="post">Post:</label>
+        <input type="text" id="post" name="post" required><br><br>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company"><br><br>
+
+        <label for="experience">Experience (years):</label>
+        <input type="number" id="experience" name="experience" required min="0" step="1"><br><br>
+
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+            <option value="it">IT</option>
+            <option value="non-it">Non-IT</option>
+        </select><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required pattern="\d{10}" title="Please enter a valid 10-digit mobile number"><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
